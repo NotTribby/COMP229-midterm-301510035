@@ -31,7 +31,7 @@ const router = Router();
  *               items:
  *                 $ref: '#/components/schemas/Item'
  */
-router.______('/',          listItems);                     // GET    /api/items
+router.get('/',          listItems);                     // GET    /api/items
 
 /**
  * @openapi
@@ -53,7 +53,7 @@ router.______('/',          listItems);                     // GET    /api/items
  *       401:
  *         description: Missing or invalid token
  */
-router.______('/mine',      requireAuth, listMyItems);      // GET    /api/items/mine
+router.get('/mine',      requireAuth, listMyItems);      // GET    /api/items/mine
 
 /**
  * @openapi
@@ -76,7 +76,7 @@ router.______('/mine',      requireAuth, listMyItems);      // GET    /api/items
  *       404:
  *         description: Not found
  */
-router.______('/:id',       getItemById);                   // GET    /api/items/:id
+router.get('/:id',       getItemById);                   // GET    /api/items/:id
 
 /**
  * @openapi
@@ -104,7 +104,7 @@ router.______('/:id',       getItemById);                   // GET    /api/items
  *       401:
  *         description: Missing or invalid token
  */
-router.______('/',         createItem);       // POST   /api/items
+router.post('/',         createItem);       // POST   /api/items
 
 /**
  * @openapi
@@ -139,7 +139,7 @@ router.______('/',         createItem);       // POST   /api/items
  *       404:
  *         description: Not found
  */
-router.______('/:id',       updateItem);       // PUT    /api/items/:id
+router.put('/:id',       updateItem);       // PUT    /api/items/:id
 
 /**
  * @openapi
@@ -161,7 +161,7 @@ router.______('/:id',       updateItem);       // PUT    /api/items/:id
  *       401:
  *         description: Missing or invalid token
  */
-router.______('/mine',   deleteMyItems);    // DELETE /api/items/mine
+router.delete('/mine',   deleteMyItems);    // DELETE /api/items/mine
 
 /**
  * @openapi
@@ -186,6 +186,6 @@ router.______('/mine',   deleteMyItems);    // DELETE /api/items/mine
  *       404:
  *         description: Not found
  */
-router.______('/:id',    deleteItem);       // DELETE /api/items/:id
+router.delete('/:id',    deleteItem);       // DELETE /api/items/:id
 
 export default router;

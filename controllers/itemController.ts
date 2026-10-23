@@ -10,37 +10,37 @@ import Item from '../models/Item.js';
 
 type AsyncHandler = (req: Request, res: Response, next: NextFunction) => Promise<Response | void>;
 
-export const __: AsyncHandler = async (_req, res) => {
+export const listItems: AsyncHandler = async (_req, res) => {
   // TODO
   res.status(501).json({ error: 'Not Implemented: listItems' });
 };
 
-export const ___: AsyncHandler = async (_req, res) => {
+export const listMyItems: AsyncHandler = async (_req, res) => {
   // TODO
   res.status(501).json({ error: 'Not Implemented: listMyItems' });
 };
 
-export const _____: AsyncHandler = async (_req, res) => {
+export const getItemById: AsyncHandler = async (_req, res) => {
   // TODO
   res.status(501).json({ error: 'Not Implemented: getItemById' });
 };
 
-export const _______: AsyncHandler = async (_req, res) => {
+export const createItem: AsyncHandler = async (_req, res) => {
   // TODO
   res.status(501).json({ error: 'Not Implemented: createItem' });
 };
 
-export const _________: AsyncHandler = async (_req, res) => {
+export const updateItem: AsyncHandler = async (_req, res) => {
   // TODO
   res.status(501).json({ error: 'Not Implemented: updateItem' });
 };
 
-export const ____________: AsyncHandler = async (_req, res) => {
+export const deleteMyItems: AsyncHandler = async (_req, res) => {
   // TODO
   res.status(501).json({ error: 'Not Implemented: deleteMyItems' });
 };
 
-export const ______________: AsyncHandler = async (_req, res) => {
+export const deleteItem: AsyncHandler = async (_req, res) => {
   // TODO
   res.status(501).json({ error: 'Not Implemented: deleteItem' });
 };
