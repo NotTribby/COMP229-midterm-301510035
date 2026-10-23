@@ -10,6 +10,7 @@ import Item, { ITEM_TYPES, ITEM_CATEGORIES } from '../models/Item.js';
 import type { Request, Response, NextFunction } from 'express';
 
 type AsyncHandler = (req: Request, res: Response, next: NextFunction) => Promise<Response | void>;
+const ALLOWED_FIELDS = ['title', 'description', 'type', 'category', 'location', 'date', 'status'];
 
 export const listItems: AsyncHandler = async (req, res, next) => {
   try {
