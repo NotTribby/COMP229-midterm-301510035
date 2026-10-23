@@ -104,7 +104,7 @@ router.get('/:id',       getItemById);                   // GET    /api/items/:i
  *       401:
  *         description: Missing or invalid token
  */
-router.post('/',         createItem);       // POST   /api/items
+router.post('/',         requireAuth,createItem);       // POST   /api/items
 
 /**
  * @openapi
@@ -139,7 +139,7 @@ router.post('/',         createItem);       // POST   /api/items
  *       404:
  *         description: Not found
  */
-router.put('/:id',       updateItem);       // PUT    /api/items/:id
+router.put('/:id',       requireAuth, updateItem);       // PUT    /api/items/:id
 
 /**
  * @openapi
@@ -161,7 +161,7 @@ router.put('/:id',       updateItem);       // PUT    /api/items/:id
  *       401:
  *         description: Missing or invalid token
  */
-router.delete('/mine',   deleteMyItems);    // DELETE /api/items/mine
+router.delete('/mine',   requireAuth, deleteMyItems);    // DELETE /api/items/mine
 
 /**
  * @openapi
@@ -186,6 +186,6 @@ router.delete('/mine',   deleteMyItems);    // DELETE /api/items/mine
  *       404:
  *         description: Not found
  */
-router.delete('/:id',    deleteItem);       // DELETE /api/items/:id
+router.delete('/:id',    requireAuth,deleteItem);       // DELETE /api/items/:id
 
 export default router;
