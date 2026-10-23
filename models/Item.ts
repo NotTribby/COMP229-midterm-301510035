@@ -27,11 +27,14 @@ const itemSchema = new Schema<ItemDocument>(
       type: String,
       required: [true, 'Title is required'],
       trim: true,
+      unique: true,
+      maxlength: [100, 'Title must be 100 characters or less'],
     },
     description: {
       type: String,
       required: [true, 'Description is required'],
       trim: true,
+      maxlength: [1000, 'Description must be 1000 characters or less'],
     },
     type: {
       type: String,
